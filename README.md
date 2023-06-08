@@ -16,6 +16,32 @@ json
 requests
 datetime
 
+## Data types
+
+| Variable |   Name   |   Unit   |
+| -------- | -------- | -------- |
+| bulk_density | bulk density   | kg/m3   |
+| cec   | cation-exchange capacity   | --------   |
+| clay | -------- | percent |
+| ph | -------- | -------- |
+| sand | -------- | percent |
+| silt | -------- | percent |
+| soil_texture | soil texture | USDA soil textural class |
+| temp | air temp. | C |
+| dwpt | dew point | C |
+| rhum | relative humidity | percent |
+| snow | snow depth | mm |
+| wdir | average wind direction | degrees |
+| wspd | average wind speed | km/h |
+| wpgt | peak wind gust | km/h |
+| pres | average sea level air pressure | hPa |
+| coco | weather condition code | -------- |
+| tavg | average air temp. | C |
+| tmin | min air temp. | C |
+| tmax | max air temp. | C |
+| prcp | precipitation | mm |
+| tsun | sunshine total | minutes |
+
 ## Usage
 
 Data pulls return a pandas dataframe.
