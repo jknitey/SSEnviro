@@ -15,5 +15,5 @@ setup(
     ], 
     python_requires='>=3.8.8',
     license="MIT",
-    keywords=["weather", "data", "timeseries", "meteorology", "soil", "agriculture"],
+    keywords=["weather", "data", "timeseries", "meteorology", "soil", "agriculture", "agriculture data"],
 )
