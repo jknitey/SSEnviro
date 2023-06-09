@@ -76,6 +76,7 @@ end = datetime(2023, 1, 15)
 
 get_weather_data(id='test1', type='daily', latitude=latitude, longitude=longitude, start_date=start, end_date=end)
 ```
+get_weather_data type can be: 'hourly', 'daily', 'monthly'
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
