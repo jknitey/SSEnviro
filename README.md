@@ -23,7 +23,7 @@ json
 requests
 datetime
 
-## Data types
+## Available data
 
 | Variable |   Name   |   Unit   |
 | -------- | -------- | -------- |
