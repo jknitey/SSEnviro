@@ -1,6 +1,6 @@
 # SSEnviro
 
-Single Service Enviromental data (SSEnviro) is a one stop shop for all your soil and weather environmental data. The goal of this package is to have one place to access environmental data. The package utilize the ISRIC soil grids for soil data, and meteostats for weather data.
+Single Service Enviromental data (SSEnviro) is a one stop shop for all your soil and weather environmental data. The goal of this package is to have one place to access environmental data. The package utilizes the ISRIC soil grids for soil data, and meteostats for weather data.
 
 ## Installation
 
