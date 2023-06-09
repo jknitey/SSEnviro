@@ -50,6 +50,7 @@ datetime
 | tsun | sunshine total | minutes |
 
 ## Usage
+See 'SSEnviro examples.ipynb' for more examples and usage.
 
 Data pulls return a pandas dataframe.
 
