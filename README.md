@@ -5,7 +5,11 @@ Single Service Enviromental data (SSEnviro) is a one stop shop for all your soil
 ## Installation
 
 ```bash
+get package from GitHub
 git clone https://github.com/jknitey/SSEnviro.git
+
+run pip to install package
+pip install -e .
 ```
 
 ## Dependencies
