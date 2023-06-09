@@ -8,6 +8,9 @@ Single Service Enviromental data (SSEnviro) is a one stop shop for all your soil
 get package from GitHub
 git clone https://github.com/jknitey/SSEnviro.git
 
+navigate to package
+cd SSEnviro
+
 run pip to install package
 pip install -e .
 ```
