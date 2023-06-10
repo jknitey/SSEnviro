@@ -7,6 +7,9 @@ import pandas as pd
 
 
 def get_weather_data(id, type, latitude, longitude, start_date, end_date) -> pd.DataFrame:
+    '''
+    Function pulls weather data from meteostat. Data can be hourly, daily, or monthly.
+    '''
     start = start_date
     end = end_date
     place = Point(latitude, longitude)

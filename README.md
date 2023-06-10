@@ -65,6 +65,10 @@ longitude = -111.09
 
 get_soil_data(id=test, latitude=latitude, longitude=longitude)
 
+# get a weighted soil sample. 4 additional data points around the center point are sampled. These samples make a 50 x 50 meter area around the center point. Final data is the average of all 5 data points. This helps to get a better representation of the soil in a field. Details below.
+test_df = get_soil_data(id='test1', latitude=lat, longitude=long, weighted_sampling=True)
+test_df
+
 # weather data pull
 from SSEnviro import get_weather_data
 from datetime import datetime
@@ -79,9 +83,14 @@ get_weather_data(id='test1', type='daily', latitude=latitude, longitude=longitud
 ```
 get_weather_data type can be: 'hourly', 'daily', 'monthly'
 
+Weighted sampling is to help get a better representaion of soil in your location. 4 additional points are sampled around your location. The 4 additional points make a 50 x 50 meter square around your location. The data from all 5 samples is averged to give you a weighted sample of your location.
+
+Example of data that is sampled. First point is the input point and the other points are the points of the 50 x 50 meter box around your point.
+![weighted sample example data](weighted_samples_img.png)
+![weighted sample 50 x 50 meter box around point](weighted_samples_plot.png)
+
 ## To-do
 - batch location data pulls.
-- weighted location sampling option. pull data from around point location and get averaged result.
 - GxE analysis
 
 ## Contributing

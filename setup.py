@@ -10,8 +10,9 @@ setup(
         'meteostat>=1.6.5',
         'pandas>=1.5.3',
         'requests>=2.27.1',
+        'geopy>=2.3.0',
     ], 
     python_requires='>=3.8.8',
     license="MIT",
-    keywords=["weather", "data", "timeseries", "meteorology", "soil", "agriculture", "agriculture data"],
+    keywords=["weather", "data", "timeseries", "meteorology", "soil", "agriculture", "agriculture data", "isric"],
 )
