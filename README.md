@@ -66,8 +66,7 @@ longitude = -111.09
 get_soil_data(id=test, latitude=latitude, longitude=longitude)
 
 # get a weighted soil sample. 4 additional data points around the center point are sampled. These samples make a 50 x 50 meter area around the center point. Final data is the average of all 5 data points. This helps to get a better representation of the soil in a field. Details below.
-test_df = get_soil_data(id='test1', latitude=lat, longitude=long, weighted_sampling=True)
-test_df
+get_soil_data(id='test1', latitude=lat, longitude=long, weighted_sampling=True)
 
 # weather data pull
 from SSEnviro import get_weather_data
