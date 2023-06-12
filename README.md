@@ -82,7 +82,7 @@ get_weather_data(id='test1', type='daily', latitude=latitude, longitude=longitud
 ```
 get_weather_data type can be: 'hourly', 'daily', 'monthly'
 
-## Weighted sampling explination
+## Weighted sampling explanation
 Weighted sampling is to help get a better representaion of soil in your location. Four additional data points are sampled around your location making a 50 x 50 meter square. The data from all 5 samples is averged to give you a weighted sample of your location.
 
 Below is an example of the data that is sampled for weighted sampling. The first point is the input point and the other points are the points of the 50 x 50 meter box around your point.
