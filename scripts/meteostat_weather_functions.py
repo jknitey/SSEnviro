@@ -6,7 +6,7 @@ from meteostat import Monthly
 import pandas as pd
 
 
-def get_weather_data(id, type, latitude, longitude, start_date, end_date) -> pd.DataFrame:
+def get_meteostat_data(id, type, latitude, longitude, start_date, end_date) -> pd.DataFrame:
     '''
     Function pulls weather data from meteostat. Data can be hourly, daily, or monthly.
     '''

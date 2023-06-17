@@ -1,6 +1,6 @@
 # SSEnviro
 
-Single Service Enviromental data (SSEnviro) is a one stop shop for all your soil and weather environmental data. The goal of this package is to have one place to access environmental data. The package utilizes the ISRIC soil data, and NOAA weather data from meteostats.
+Single Service Enviromental data (SSEnviro) is a one stop shop for all your soil and weather environmental data. The goal of this package is to have one place to access environmental data. The package utilizes the ISRIC soil data and Daymet weather data.
 
 ## Installation
 
@@ -17,7 +17,6 @@ pip install -e .
 
 ## Dependencies
 
-meteostat,
 pandas,
 json,
 requests,
@@ -25,29 +24,24 @@ datetime
 
 ## Available data
 
-| Variable |   Name   |   Unit   |
-| -------- | -------- | -------- |
-| bulk_density | bulk density   | kg/m3   |
-| cec   | cation-exchange capacity   | --------   |
-| clay | -------- | percent |
-| ph | -------- | -------- |
-| sand | -------- | percent |
-| silt | -------- | percent |
-| soil_texture | soil texture | USDA soil textural class |
-| temp | air temp. | C |
-| dwpt | dew point | C |
-| rhum | relative humidity | percent |
-| snow | snow depth | mm |
-| wdir | average wind direction | degrees |
-| wspd | average wind speed | km/h |
-| wpgt | peak wind gust | km/h |
-| pres | average sea level air pressure | hPa |
-| coco | weather condition code | -------- |
-| tavg | average air temp. | C |
-| tmin | min air temp. | C |
-| tmax | max air temp. | C |
-| prcp | precipitation | mm |
-| tsun | sunshine total | minutes |
+|    Variable   |             Name(Unit)                                                 |
+|    --------   |             --------                                                   |
+|  bulk_density |             Bulk density(kg/m3)                                        |
+|      cec      |             cation-exchange capacity                                   |
+|      clay     |             Clay(percent)                                              |
+|      ph       |                                                                        |
+|      sand     |             Sand(percent)                                              |
+|      silt     |             Silt(percent)                                              |
+|  soil_texture |             Soil texture(USDA soil textural class)                     |
+|      dayl     |             Duration of the daylight period (seconds/day)              |
+|      prcp     |             Daily total precipitation (mm/day)                         |
+|      srad     |             Incident shortwave radiation flux density(W/m<sup>2</sup>) |
+|      swe      |             Snow water equivalent (kg/m<sup>2</sup>)                   |
+|      tmax     |             Daily maximum 2-meter air temperature (°C)                 |
+|      tmin     |             Daily minimum 2-meter air temperature (°C)                 |
+|      vp       |             Water vapor pressure (Pa)                                  |
+|      pet      |             Potential Evapotranspiration (mm/day)                      |
+
 
 ## Usage
 See 'SSEnviro examples.ipynb' for more examples and usage.
@@ -65,22 +59,22 @@ longitude = -111.09
 
 get_soil_data(id=test, latitude=latitude, longitude=longitude)
 
+# soil data pull weighted sampling
+
 # get a weighted soil sample. 4 additional data points around the center point are sampled. These samples make a 50 x 50 meter area around the center point. Final data is the average of all 5 data points. This helps to get a better representation of the soil in a field. Details below.
 get_soil_data(id='test1', latitude=lat, longitude=long, weighted_sampling=True)
 
 # weather data pull
 from SSEnviro import get_weather_data
-from datetime import datetime
 
 
-latitude = 43.61
-longitude = -111.09
-start = datetime(2023, 1, 1)
-end = datetime(2023, 1, 15)
+latitude = 40.7128
+longitude = -74.0060
+start = '2022-01-01'
+end = '2022-01-10'
 
-get_weather_data(id='test1', type='daily', latitude=latitude, longitude=longitude, start_date=start, end_date=end)
+get_weather_data(id='test1', latitude=latitude, longitude=longitude, start_date=start, end_date=end)
 ```
-get_weather_data type can be: 'hourly', 'daily', 'monthly'
 
 ## Weighted sampling explination
 Weighted sampling is to help get a better representaion of soil in your location. Four additional data points are sampled around your location making a 50 x 50 meter square. The data from all 5 samples is averged to give you a weighted sample of your location.

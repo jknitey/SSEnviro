@@ -12,7 +12,7 @@ def get_weighted_sample(latitude, longitude):
     center_longitude = longitude
         
     # Converter to get degrees to meters
-    distance_converter = 2800
+    distance_converter = 6000
     
     # Calculate distance in degrees using geopy
     distance_degrees = distance(meters=distance_converter).kilometers / 111.0
