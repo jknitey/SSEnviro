@@ -52,6 +52,6 @@ def get_weather_data(id, latitude, longitude, start_date, end_date):
         pet = calculate_pet(row['tmax (deg c)'], row['tmin (deg c)'], row['srad (W/m^2)'], row['vp (Pa)'], row['dayl (s)'], row['tavg (deg c)'])
         df.at[index, 'pet'] = pet
 
-    df = df[['id', 'latitude', 'longitude', 'year', 'yday', 'date', 'dayl (s)', 'prcp (mm/day)', 'tmin (deg c)', 'tmax (deg c)', 'tavg (deg c)', 'srad (W/m^2)', 'vp (Pa)']]
+    df = df[['id', 'latitude', 'longitude', 'year', 'yday', 'date', 'dayl (s)', 'prcp (mm/day)', 'tmin (deg c)', 'tmax (deg c)', 'tavg (deg c)', 'srad (W/m^2)', 'vp (Pa)', 'pet (mm/day)']]
     
     return df
